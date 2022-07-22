@@ -1,0 +1,924 @@
+WEEK 1:
+AIM:
+Design the following static web pages required for an online book store web site.
+1) HOME PAGE:
+The static home page must contain three frames.
+Top frame : Logo and the college name and links to Home page, Login page, Registration
+page, Catalogue page and Cart page (the description of these pages will be given below).
+Left frame : At least four links for navigation, which will display the catalogue of respective
+links.For e.g.: When you click the link “IT” the catalogue for IT Books should be displayed
+in the Right frame.
+Right frame: The pages to the links in the left frame must be loaded here.
+Initially this page contains description of the web site.
+
+head.html
+
+<html>
+<head>
+<frameset rows="20%,80%">
+<frame src="topframe.html"name="f1">
+<frameset cols="20%,80%">
+<frame src="leftframe.html"name="f2">
+<frame src="rightframe.html"name="f3">
+</frameset>
+</frameset>
+</head>
+</html>
+
+
+
+Login.html
+
+<html>
+<head> <title> Login Page </title>
+</head>
+ <body bgcolor=#86B049>
+ <form name="login">
+<h3> <u> Login Page </u> </h3>
+login: <input type="text" name="uname" ><br>
+password: <input type="password" name="pwd" ><br>
+<input type="submit" value="Submit" >
+<input type="reset" value="reset">
+</center> </form>
+</body></html>
+
+
+Rightframe.html
+
+<html>
+<body bgcolor=#DFF5CE>
+<h1 align=center>
+Hello Friends </h1>
+<p align=center>
+<h1>About Sreenidhi Educational Group</h1>
+Sreenidhi Institute of Science and Technology–Hyderabad, sponsored by Sree Educational Group was established in the year 1997 by the Chairman, Dr. K.T. Mahhe, an extraordinary educationist, a pragmatic leader, and a dynamic entrepreneur with rich experience in Academics and Industry. 
+</p>
+</body></html>
+Topframe.html
+
+<html>
+<body bgcolor=#DEE2FC>
+<p>
+<img src="logo.jpg" align=left width=200 height=80>
+<h1 align=center><img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">* * * SNIST LIBRARY * * *<img src="programming.gif" alt="Computer man" style="width:48px;height:48px;"></h1>
+</p>
+<br>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="homepage.html" target="f3">
+HOME
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="login.html" target="f3">
+LOGIN
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="regis.html.html" target="f3">
+REGISTRATION
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="catalog.html" target="f3">
+CATALOGUE
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="cart.html" target="f3">
+CART
+</a>
+&nbsp;
+</h2>
+</p>
+</body>
+</html>
+
+Leftframe.html
+
+<html>
+<body bgcolor=#c8888A>
+<a href="cse.html" target="f3">
+<h3 align=center>CSE</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="it.html" target="f3">
+<h3 align=center>
+IT</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="ece.html" target="f3">
+<h3 align=center>
+ECE
+</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="eee.html" target="f3">
+<h3 align=center>
+EEE
+</h3>
+</a>
+</body>
+</html>
+
+
+Homepage.html
+
+<html>
+    <body bgcolor=#F7AD19>
+        <center>
+            <p> Hello guys<br>Welcome to ebook store</p>
+        </center>
+    </body>
+</html>
+
+
+
+Catalog.html
+
+<html>
+    <body bgcolor=#BFD834>
+        <center>
+            <table border="1">
+                <tr>
+                    <th>book preview</th>
+                    <th>book details</th>
+                    <th>price</th>
+                    <th>payment</th>
+                </tr>
+                <td><img src="bib.jpg"height=100></img>
+                </td>
+                <td>
+                <pre>
+                    <font face="comic sans ms"size=4 color="green">
+                        book:XML bible
+                        author:winston
+                        publisher:wiesly
+                    </font>
+                </pre>
+                </td>
+                <td> &nbsp; $40 &nbsp; </td>
+                <td> &nbsp; &nbsp; 
+                    <a href="cart.html"target="blank">
+                    <img src="" height="100" </img> 
+                    </a> &nbsp; &nbsp;
+                </td>
+                </tr>
+                <tr>
+                <td><img src="g105.jpg"height=100>
+                </img>
+                </td>
+                <td>
+                    <pre>
+                        <font face="comic sans ms" size4 color="green">
+                            book:Girl in room no 105
+                            author:Chetan Bhagat
+                            publisher:BPB publications
+                        </font>
+                    </pre>
+                </td>
+                <td> &nbsp; $40 &nbsp; </td>
+                <td> &nbsp; &nbsp;<a href="cart.html"target="blank> </a>"
+                </td>
+                <img src=""height=100></img>
+                </a> &nbsp; &nbsp;
+                </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>   
+
+
+Cart.html
+
+
+<html>
+<body bgcolor=#00AEAD>
+<table cellspacing="50" cellpadding="20" border="1">
+<tr>
+ <td>Book name</td>
+ <td>price</td>
+ <td>quantity</td>
+ <td>amount</td>
+</tr>
+<tr>
+ <td>java2</td>
+ <td>$35.5</td>
+ <td>2</td>
+ <td>$70</td>
+</tr>
+<tr>
+ <td>XML bible</td>
+ <td>$40.5</td>
+ <td>1</td>
+ <td>$40.5</td>
+</tr> <tr>
+<td></td>
+<td></td>
+<td>Total amount </td>
+<td>130.5 </td>
+</tr>
+</body>
+</html>
+
+
+OUTPUT:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WEEK 3:
+AIM: VALIDATION:
+Write JavaScript to validate the following fields of the above registration page.
+1. Name (Name should contains alphabets and the length should not be less than 6
+characters).
+2. Password (Password should not be less than 6 characters length).
+3. E-mail id (should not contain any invalid and must follow the standard pattern
+name@domain.com)
+4. Phone number (Phone number should contain 10 digits only).
+Note: You can also validate the login page with these parameters.
+<!—Program for validating the username (Name should contains alphabets and the length
+should not be less than 6 characters).
+
+
+<html>
+<head>
+<title>Form validation</title>
+<script language="javascript">
+function button_click()
+{
+var fname=f.fname.value; 
+var fpwd=f.fpwd.value;
+var fcpwd=f.fcpwd.value;
+var fph=f.ph.value;
+var txtname=f.txtname.value;
+var spchar = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?~";
+var number="0123456789";
+if(fpwd!=fcpwd)
+{
+ alert("passwod not match");
+}
+else
+{
+ alert("password matched");
+}
+if(fname.length<6)
+{
+alert("first name atleast 6 characters");
+}
+if(fname!="")
+{
+for (var i=0;i<fname.length;i++)
+{
+if(spchar.indexOf(fname.charAt(i))!= -1)
+{
+alert("Userid should not have special characters");
+f.fname.value=" ";
+return false;
+}
+}
+}
+if(fname!="")
+{
+for(var i=0;i<fname.length;i++)
+{
+if(number.indexOf(fname.charAt(i)) != -1)
+{
+alert("Userid should not have numbers");
+f.fname.value="";
+return false;
+}
+}
+}
+if(fname.length>=6)
+{
+ alert("valid username");
+}
+if(fpwd.length>=6)
+{
+  alert("valid password");
+}
+else
+{
+ alert("password atleast 6 characters");
+}
+if(fph.length==10)
+{
+ if(isNaN(fph))
+ {
+   alert("It is not a valid Phone number");
+ }
+ else
+ {
+  alert("It is a valid Phone number");
+ }
+}
+else
+alert("Please enter a valid phone number");
+if(f.txtname.value.indexOf('@')==-1)
+{
+alert("invalid");
+}
+else 
+if((f.txtname.value.indexOf('@')==0)||(f.txtname.value.indexOf('.')==0)||(f.txtname.value.indexOf('.')==0)>
+(f.txtname.value.indexOf('@')))
+{
+alert("invalid email id"); 
+f.txtname.value=""; 
+}
+else
+alert("valid email id");
+}
+</script>
+<body>
+<center>
+<form name="f">
+<table>
+<h2 align="center">VALIDATION</h2>
+<tr>
+<td align="right">USERNAME:</td>
+<td><input type="text" name="fname" maxlength=20 size=30></td>
+</tr><tr>
+<td align="right">PASSWORD:</td>
+<td><input type="password" name="fpwd" maxlength=20 size=30></td>
+</tr>
+<tr>
+<td align="right">CONFIRM PASSWORD:</td>
+<td><input type="password" name="fcpwd" maxlength=20 size=30></td>
+</tr>
+<tr>
+<td align="right">PHONE NO:</td>
+<td><input type="text" name="ph" maxlength=15 size=30></td>
+</tr><tr>
+<td align="right">Email-ID:</td>
+<td><input type="text" name="txtname" maxlength=20 size=40></td></tr>
+<tr>
+<td><input type="button" value="SUBMIT" onClick="button_click()"></td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+       OUT PUT:
+
+
+
+
+
+STUDENT REGISTRATION FORM:
+
+
+<Html>  
+<head>   
+<title>  
+Student Registration Form
+</title>  
+</head>  
+<body bgcolor="white">  
+
+<h1 align="center">Student Registration Form</h1>
+
+<br>  
+<br>  
+<form>  
+
+  
+<label> Firstname </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+<label> Middlename: </label>     
+<input type="text" name="middlename" size="15"/> <br> <br>  
+<label> Lastname: </label>         
+<input type="text" name="lastname" size="15"/> <br> <br>  
+
+<label>   
+Course :  
+</label>   
+<select>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+ 
+<br>  
+<br>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" name="male"/> Male <br>  
+<input type="radio" name="female"/> Female <br>  
+<input type="radio" name="other"/> Other  
+<br>  
+<br>  
+  
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code"  value="+91" size="2"/>   
+<input type="text" name="phone" size="10"/> <br> <br>  
+Email:  
+<input type="email" id="email" name="email"/> <br>    
+<br> <br>  
+Password:  
+<input type="Password" id="pass" name="pass"> <br>   
+<br> <br>  
+Re-type password:  
+<input type="Password" id="repass" name="repass"> <br> <br>  
+<input type="button" value="Submit"/> 
+<input type='Reset' value='Reset'/> 
+
+</form>  
+</body>  
+</html>  
+
+OUTPUT:
+
+WEEK 4:
+AIM:
+Develop and demonstrate the usage of inline, internal and external style sheet using CSS. Aim: Design a web page using CSS which includes the following: 1) Use different font styles 2) Control the repetition of image with background-repeat and no-repeat property 3) Define style for links as a: link, a: active, a: hover, a: visited 4) Add customized cursors for links.4) Define styles for links as A:link A:visited A:active A:hover 
+Style.css
+p.center 
+{ 
+ text-align:center; 
+ text-decoration:underline; 
+ text-transform:uppercase; 
+ letter-spacing:-3px; 
+ word-spacing:20px; 
+ font-size:larger; 
+} 
+p.right 
+{ 
+ text-align:right; 
+ color:red; 
+ font-family:Tahoma; 
+ font-size:15pt; 
+ text-decoration:overline; 
+ font-style:italic; 
+} 
+b#headline 
+{ 
+ color:orange; 
+ font-size:22px; 
+ font-family:arial; 
+ text-decoration:underline; }
+sample.html 
+<html> 
+ <head> 
+ <style type="text/css"> 
+ body 
+ { 
+ background-image:url(“img.jpg”); 
+background-size: 2000px 2000px;
+ background-repeat:no-repeat; 
+ background-position:center center; 
+ background-attachment:fixed; 
+ background-color:pink; 
+ } 
+ a:link { text-decoration:none;color:orange; } 
+ a:visited { text-decoration:none;color:red; } 
+ a:hover { text-decoration:underline;color:blue; } 
+ a:active { text-decoration:underline;color:purple; } 
+ h3 { color:green; } 
+ .c1{cursor:crosshair} 
+ .c2{cursor:pointer} 
+ .c3{cursor:move} 
+ .c4{cursor:text} 
+ .c5{cursor:wait} 
+ .c6{cursor:help} 
+ </style> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+ </head> 
+<body bgcolor="cyan"> 
+ <h1 style="color:blue;text-align:center;"> CSS (Inline, Internal and External) </h1> 
+ <p>This Paragraph is a Not Styled</p> 
+ <p class="left">This Paragraph is Styled by class "Left"</p> 
+ <p class="center">This Paragraph is Styled by class "Center"</p> 
+ <p class="right">This Paragraph is Styled by class "Right"</p> 
+ <b>This is normal Bold</b> <br> 
+ <b id="headline">This Bold Text is Styled </b> 
+ 
+ <h2><b><a href=" ">This is a link</a></b></h2> 
+ <h3 class="c1">The cursor over this element is plus sign</h3> 
+ <h3 class="c2">The cursor over this element is a pointing hand</h3> 
+ <h3 class="c3">The cursor over this element is a grasping hand</h3> 
+ <h3 class="c4">The cursor over this element is a I bar</h3> 
+ <h3 class="c5">The cursor over this element is a wait</h3> 
+ <h3 class="c6">The cursor over this element is a question mark</h3> 
+</html>
+
+OUTPUT:
+
+
+CREATING A TABLE:
+
+<html>
+<head>Table</head>
+<table>
+<style> table th,td {
+border:1px solid black;
+}
+</style>
+<tr>
+<th> std name</th>
+<th> rno</th>
+<th>section c</th>
+</tr>
+<tr>
+<td>Raghupathi</td>
+<td>120871</td>
+<td>c</td>
+</tr>
+<tr>
+<td>Raghava</td>
+<td>120562</td>
+<td>c</td>
+</tr>
+<tr>
+<td>RajaRam</td>
+<td>1206783</td>
+<td>c</td>
+</tr>
+</table>
+</html>
+OUTPUT:
+
+CREATING HTML page with font and Image inserted in it.
+
+<html>
+<title>week 4 </title>
+<head> font Styles  </head>
+<style>
+p.italic{
+font-style:italic;
+}
+p.oblique
+{
+font-style:oblique;
+}
+</style>
+<body>
+<div id="im1">
+<p class="italian">hi a very good afternoon.</p>
+<p class="oblique">hia very good afternoon!,</p>
+<img src="imm.jpg">
+</div>
+</body>
+</html>
+
+
+
+output:
+
+HTML page with Paragraph tag and Heading tags.
+<html>
+<title>week 4 </title>
+<head> font Styles  </head>
+<body>
+<p>This is a paragraph tag</p>
+Headings
+<h1>This is H1</h1>
+<h2>This is H2</h2>
+<h3>This is H3</h3>
+<h4>This is H4</h4>
+<h5>This is H5</h5>
+<h6>This is H6</h6>
+</body>
+</html>
+
+
+
+OUTPUT:
+
+HTML lists:
+<html>
+<body>
+<head>
+  welcome to Html
+</head>
+<h1>ORDERED LIST</h1>
+<ol>
+<li>abdcrfdgfgggg</li>
+<li>bgefrgh</li>
+</ol>
+<h1>UNORDERED LIST</h1>
+<ul>
+<li>abdcrfdgfgggg</li>
+<li>bgefrgh</li>
+</ul>
+</body>
+</html>
+
+OUTPUT:
+
+
+Week 12:
+Write a PHP to test the database connection
+<?php
+$servername = "localhost";
+Susername="username";
+Spassword = "password";
+// Create connection
+Sconn = new mysqli($servername, $username, $password); Check connection
+if (Sconn->connect_error) {
+die("Connection failed: ", $conn->connect_error);
+}
+echo "Connected successfully";
+?>
+OUTPUT:
+
+
+
+
+
+Write a PHP to create Database
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+// Create database
+$sql = "CREATE DATABASE myDB";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+$conn->close();
+?>
+
+Write a php to create Table 
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+// sql to create table
+$sql = "CREATE TABLE Registration(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30) NOT NULL, Phone_no number(30) NOT NULL,
+email VARCHAR(50), gender varchar2(20), DOB date, Lang varchar2(20),
+Address varchar2(40)
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Table MyGuests created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+} 
+ $conn->
+close();
+?>
+OUT PUT:
+
+
+
+Week 13:
+Write a PHP to insert values form HTML to database(registration Page)
+HTML PAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Records Form</title>
+</head>
+<body>
+<form action="insert.php" method="post">
+	<p>
+    	<label for="firstName">First Name:</label>
+        <input type="text" name="first_name" id="firstName">
+    </p>
+    <p> 	<label for="phone_no">Phone number:</label>
+        <input type="text" name="ph_no" id="ph_no">    </p>
+    <p> 	<label for="emailAddress">Email Address:</label>
+        <input type="text" name="email" id="emailAddress">   </p>
+    <p>	<label for="gender">Gender:</label>
+ <input type="text" name="gender" id="genderder">  </p>
+	 <p>
+    	<label for="Address">Address:</label>
+        <input type="text" name="address" id="Address">
+    </p>
+    <p>
+    	<label for="DOB">DOB:</label>
+        <input type="text" name="dob" id="dob">
+    </p>
+    <p>
+    	<label for="Language">Language Known:</label>
+        <input type="text" name="lang" id="lang">
+    </p>
+   
+    <input type="submit" value="Add Records">
+</form>
+</body>
+</html>
+
+PHP to insert values
+<?php
+$link = mysqli_connect("localhost", "username", "password", "demo");
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ //Fetching values form html
+$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
+$phone_no = mysqli_real_escape_string($link, $_REQUEST['phone_no']);
+$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$gender = mysqli_real_escape_string($link, $_REQUEST['gender']); 
+$address = mysqli_real_escape_string($link, $_REQUEST['address']);
+$dob = mysqli_real_escape_string($link, $_REQUEST['dob']);
+$lang = mysqli_real_escape_string($link, $_REQUEST['lang']);
+// attempt insert query execution
+$sql = "INSERT INTO registration VALUES ('$first_name', '$phone_no', '$email','$gender','$address','$dob','$lang')";
+if(mysqli_query($link, $sql)){
+    echo "Records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+ // close connection
+mysqli_close($link);
+?>
+OUT PUT:
+
+
+
+
+Write a PHP to select values form database table.
+<?php
+$link = mysqli_connect("localhost", "username", "password", "demo");
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+} 
+// Attempt select query execution
+$sql = "SELECT * FROM registration";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table>";echo "<tr>";echo "<th>id</th>";echo "<th>first_name</th>";
+echo "<th>phone_no</th>";
+                echo "<th>email</th>";
+	    echo "<th>gender</th>";
+	    echo "<th>ADDRESS</th>";
+	    echo "<th>Dob</th>";
+	    echo "<th>lang</th>";
+	    echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['phone_no'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+	    echo "<td>" . $row['gender'] . "</td>";
+	    echo "<td>" . $row['address'] . "</td>";
+	    echo "<td>" . $row['dob'] . "</td>";
+	    echo "<td>" . $row['lang'] . "</td>";
+               echo "</tr>";
+        }
+        echo "</table>";
+        // Free result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+ // Close connection
+mysqli_close($link);
+?>
+
+
+
+
+
+
+Write a PHP to update existing records of a database table.
+<?php
+$link = mysqli_connect("localhost", "username", "password", "demo");
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ // Attempt update query execution
+$sql = "UPDATE registration SET email='xyz@abcdmail.com' WHERE id=1";
+if(mysqli_query($link, $sql)){
+    echo "Records were updated successfully.";
+} else {
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);}
+ // Close connection
+mysqli_close($link);
+?>
+
+OUTPUT:
+
+
+
+
+Write a PHP to validate user login
+a).
+ <html>
+<title>login page</title>
+<form method="post" action="login.php">
+Username:<input type="text" name="username" placeholder="Enter username"><br>
+password:<input type="password" name="password" placeholder="Enter the password"><br>
+<input type="submit" name="submit">
+<input type="reset" name="reset">
+</form>
+
+</html>
+
+b.) 
+<?php
+$con=mysqli_connect('localhost','username','password','database');
+if(isset_POSt['submit']){
+$name=$_POST['username'];
+$password=$_POST['password'];
+$sql=mysqli_query("select name,password from table name where name=$name and password=$password");
+$result=mysqli_query($con,$sql);
+if(mysqli_num_rows($result)>0)
+  {
+  header("location: home.php"); 
+ }
+else  {    echo "login denied";  }}?>
+
+
+Write Servlet program to print "Hello World"
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+// Extend HttpServlet class
+public class HelloWorld extends HttpServlet {
+   private String message;
+   public void init() throws ServletException {
+      // Do required initialization
+      message = "Hello World";
+   }
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException  
+      // Set response content type
+      response.setContentType("text/html");
+      // Actual logic goes here.
+      PrintWriter out = response.getWriter();
+      out.println("<h1>" + message + "</h1>");
+   }
+   public void destroy() {
+      // do nothing.
+   }
+}
+
+
+Servlet Deployment
+<servlet>
+   <servlet-name>HelloWorld</servlet-name>
+   <servlet-class>HelloWorld</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>HelloWorld</servlet-name>
+   <url-pattern>/HelloWorld</url-pattern>
+</servlet-mapping>
+
+OUT PUT:
+
+
+Write a jsp code to print "Hello World"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Hello Word</title>
+</head>
+
+<body>
+
+<font size="20" color="red"><%="HelloWorld" %></font>
+
+</body>
+</html>
+
+
+OUTPUT:
