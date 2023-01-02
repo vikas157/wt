@@ -1,4 +1,19 @@
-8a]
+2) diaplay lines between lines
+echo Enter File Name:
+read f
+echo Enter Starting Line Number:
+read st
+echo Enter Ending Line Number:
+read end
+echo The lines between $st and $end from $f are:
+if [ $st -lt $end ]
+then
+sed -n "$st,$end p" $f
+elif [ $st -gt $end ]
+then
+sed -n "$end,$st p" $f
+fi
+8a] awk count noof lines
 count=0
 awk '$0!~/[aeiou]/{ count++ }
 END{print "The number of lines that do not contain vowels are: ",count}' $1
@@ -6,13 +21,13 @@ END{print "The number of lines that do not contain vowels are: ",count}' $1
 
 
 
-8b]
+8b] no of lines words and char
 awk '{w+=NF
       c+=length($0)}
 END{print("Lines,Words,Characters:",NR,w,c)}' $1
                                             
 
-10]
+10] c to emulate ls -l command
 #include<stdio.h>
 #include<stdlib.h>
 #include<dirent.h>
@@ -71,7 +86,7 @@ yy
 
 
 
-11]
+11]zombi process
 #include<stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -94,7 +109,7 @@ int main(){
 
 
 
-12ab]
+12ab] writing from message queue
 
 #include <stdio.h>
 #include <sys/ipc.h>
@@ -123,7 +138,7 @@ int main(){
 
 
 
-12c]
+12c] reading from messge queue
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
@@ -146,7 +161,7 @@ int main(){
 s
 
 
-15]
+15] data comm between e process
 #include<stdio.h>
 #include<stdlib.h>
 #include<errno.h>
